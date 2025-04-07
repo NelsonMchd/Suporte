@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Ocorrências de Tickets</title>
+  <!-- Google Fonts (Poppins) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- GSAP para animações -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    video {
+      filter: brightness(0.2);
+    }
+    /* Botões de Login e Registre-se no canto superior direito */
+    .top-right {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 20;
+    }
+    .top-right a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 4px;
+      background: linear-gradient(to right, #3b82f6, #8b5cf6);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .top-right a:hover {
+      transform: scale(1.1);
+      background: linear-gradient(to right, #8b5cf6, #4f46e5);
+    }
+  </style>
+</head>
+<body class="relative w-full h-screen flex items-center justify-center">
+  <!-- Fundo com vídeo -->
+  <div class="absolute inset-0 w-full h-full overflow-hidden">
+    <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
+      <source src="DJI_0263.MP4" type="video/mp4">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+  </div>
+  
+  <!-- Botões de Login e Registre-se no canto superior direito -->
+  <div class="top-right">
+    <a href="login.php">Login</a>
+    <a href="register.php">Registre-se</a>
+  </div>
+  
+  <!-- Conteúdo principal -->
+  <div class="relative text-center z-10 p-6 fade-in">
+    <h1 class="title text-5xl font-extrabold animate-pulse bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+      Gestão de Ocorrências de Tickets
+    </h1>
+    <p class="subtitle text-xl mt-4 opacity-80 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+      Organize e acompanhe seus tickets de forma eficiente
+    </p>
+  </div>
+
+  <script>
+    gsap.to(".fade-in", { opacity: 1, y: 0, duration: 1.5, ease: "power3.out" });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
